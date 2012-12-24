@@ -1,4 +1,4 @@
-Source: cocaine-worker-generic
+Source: cocaine-worker-nodejs
 Section: utils
 Priority: extra
 Maintainer: Andrey Sibiryov <kobolog@yandex-team.ru>
@@ -7,9 +7,9 @@ Standards-Version: 3.9.1
 Vcs-Git: git://github.com/cocaine/cocaine-worker-generic.git
 Vcs-Browser: https://github.com/cocaine/cocaine-worker-generic
 
-Package: cocaine-worker-generic
+Package: cocaine-worker-nodejs
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}, libcocaine-core2
-Description: Cocaine - Generic Worker
- Cocaine generic worker package.
+Depends: ${shlibs:Depends}, ${misc:Depends}, libcocaine-core2, nodejs (>= 0.8.14-1)
+Description: Cocaine - Node.js Worker
+ Cocaine Node.js worker package.
 

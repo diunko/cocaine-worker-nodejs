@@ -1,4 +1,4 @@
-cocaine-worker-generic (0.10.0) lucid; urgency=low
+cocaine-worker-nodejs (0.10.0-b0) lucid; urgency=low
 
   * Workers are now in a separate repositories.
 
