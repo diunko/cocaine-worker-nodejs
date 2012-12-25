@@ -29,6 +29,7 @@ ADD_EXECUTABLE(cocaine-worker-nodejs
     src/main)
 
 TARGET_LINK_LIBRARIES(cocaine-worker-nodejs
+    uv
     boost_program_options-mt
     cocaine-core)
 
