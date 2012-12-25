@@ -9,6 +9,8 @@
 
 #include <cocaine/api/stream.hpp>
 
+#include <nodejs/uv.h>
+
 namespace cocaine { namespace engine {
 
     struct worker_config_t {
@@ -74,6 +76,8 @@ namespace cocaine { namespace engine {
         
       ev::timer m_heartbeat_timer,
         m_disown_timer;
+
+      uv_poll_t* m_uv_poll_handle_;
         
       // The app
 

@@ -119,7 +119,10 @@ worker_t::worker_t(context_t& context,
     config.app);
     
   m_channel.connect(endpoint);
-    
+
+  m_uv_poll_handle_ = new uv_poll_t;
+  m_uv_poll_handle_->data = this;
+  
   m_watcher.set<worker_t, &worker_t::on_event>(this);
   m_watcher.start(m_channel.fd(), ev::READ);
   m_checker.set<worker_t, &worker_t::on_check>(this);
